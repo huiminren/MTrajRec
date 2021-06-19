@@ -5,7 +5,7 @@
 </p>
 
 ## About
-Source code of the KDD'21: [MTrajRec: Map-Constrained Trajectory Recovery via Seq2Seq Multi-task Learning]()
+Source code of the KDD'21: [MTrajRec: Map-Constrained Trajectory Recovery via Seq2Seq Multi-task Learning](https://doi.org/10.1145/3447548.3467238)
 ## Requirements
 * Python==3.6
 * `pytorch==1.7.1`
@@ -20,8 +20,13 @@ Source code of the KDD'21: [MTrajRec: Map-Constrained Trajectory Recovery via Se
 git clone git@github.com:huiminren/MTrajRec.git
 cd MTrajRec
 ```
+#### Running
+  `python multi_main.py`
 
 #### Dataset
 We provide sample data under data/.
-#### Running
-  `python multi_main.py`
+
+Please note that the sample data is generated with the structure as the original data.
+
+## Acknowledge
+Thanks to [Sijie](https://github.com/sjruan/tptk) to support data preprocessing.
