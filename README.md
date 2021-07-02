@@ -5,7 +5,7 @@
 </p>
 
 ## About
-Source code of the KDD'21: [MTrajRec: Map-Constrained Trajectory Recovery via Seq2Seq Multi-task Learning](https://doi.org/10.1145/3447548.3467238)
+Source code of the KDD'21: [MTrajRec: Map-Constrained Trajectory Recovery via Seq2Seq Multi-task Learning](doc/KDD21_MTrajRec_Huimin.pdf)
 ## Requirements
 * Python==3.6
 * `pytorch==1.7.1`
