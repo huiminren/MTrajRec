@@ -30,3 +30,18 @@ Please note that the sample data is generated with the structure as the original
 
 ## Acknowledge
 Thanks to [Sijie](https://github.com/sjruan/tptk) to support data preprocessing.
+
+## Citation
+If you find this repo useful and would like to cite it, citing our paper as the following will be really appropriate: <br>
+```
+@inproceedings{ren2021mtrajrec,
+  title={MTrajRec: Map-Constrained Trajectory Recovery via Seq2Seq Multi-task Learning},
+  author={Ren, Huimin and Ruan, Sijie and Li, Yanhua and Bao, Jie and Meng, Chuishi and Li, Ruiyuan and Zheng, Yu},
+  booktitle={Proceedings of the 27th ACM SIGKDD Conference on Knowledge Discovery \& Data Mining},
+  pages={1410--1419},
+  year={2021}
+}
+```
+
+
+
