@@ -26,10 +26,10 @@ cd MTrajRec
 #### Dataset
 We provide sample data under data/.
 
-Please note that the sample data is generated with the structure as the original data.
+Please note that the sample data is generated with the structure as the original data. For the data preprocessing, please refer to [tptk](https://github.com/sjruan/tptk).
 
 ## Acknowledge
-Thanks to [Sijie](https://github.com/sjruan/tptk) to support data preprocessing.
+Thanks to [Sijie](https://github.com/sjruan/) to support data preprocessing.
 
 ## Citation
 If you find this repo useful and would like to cite it, citing our paper as the following will be really appropriate: <br>
