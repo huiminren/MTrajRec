@@ -118,7 +118,7 @@ def train(model, iterator, optimizer, log_vars, rn_dict, grid_rn_dict, rn,
         epoch_id1_loss += loss_ids1
         epoch_recall_loss += recall
         epoch_precision_loss += precision
-        epoch_train_id_loss = loss_train_ids.item()
+        epoch_train_id_loss += loss_train_ids.item()
         epoch_rate_loss += loss_rates.item()
 
     return log_vars, epoch_ttl_loss / len(iterator), epoch_id1_loss / len(iterator), epoch_recall_loss / len(iterator), \
