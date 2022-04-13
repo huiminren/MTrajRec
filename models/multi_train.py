@@ -137,7 +137,7 @@ def evaluate(model, iterator, rn_dict, grid_rn_dict, rn, raw2new_rid_dict,
     epoch_recall_loss = 0
     epoch_precision_loss = 0
     epoch_rate_loss = 0
-    epoch_train_id_loss = 0
+    epoch_id_loss = 0 # loss from dl model
     criterion_ce = nn.NLLLoss()
     criterion_reg = nn.MSELoss()
 
@@ -207,7 +207,7 @@ def evaluate(model, iterator, rn_dict, grid_rn_dict, rn, raw2new_rid_dict,
             output_ids = output_ids[1:].reshape(-1,
                                                 output_ids_dim)  # [(trg len - 1)* batch size, output id one hot dim]
             trg_rids = trg_rids[1:].reshape(-1)  # [(trg len - 1) * batch size],
-            loss_train_ids = criterion_ce(output_ids, trg_rids)
+            loss_ids = criterion_ce(output_ids, trg_rids)
             # rate loss
             loss_rates = criterion_reg(output_rates[1:], trg_rates[1:]) * parameters.lambda1
             # loss_rates.size = [(trg len - 1), batch size], --> [(trg len - 1)* batch size,1]
@@ -220,10 +220,10 @@ def evaluate(model, iterator, rn_dict, grid_rn_dict, rn, raw2new_rid_dict,
             epoch_recall_loss += recall
             epoch_precision_loss += precision
             epoch_rate_loss += loss_rates.item()
-            epoch_train_id_loss += loss_train_ids.item()
+            epoch_id_loss += loss_ids.item()
 
         return epoch_id1_loss / len(iterator), epoch_recall_loss / len(iterator), \
                epoch_precision_loss / len(iterator), \
                epoch_dis_mae_loss / len(iterator), epoch_dis_rmse_loss / len(iterator), \
                epoch_dis_rn_mae_loss / len(iterator), epoch_dis_rn_rmse_loss / len(iterator), \
-               epoch_rate_loss / len(iterator), epoch_train_id_loss / len(iterator)
+               epoch_rate_loss / len(iterator), epoch_id_loss / len(iterator)
